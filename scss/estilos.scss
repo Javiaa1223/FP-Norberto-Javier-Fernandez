@@ -49,7 +49,7 @@ a {
   display: inline-block;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: rgba(209, 212, 48, 0.836);
 }
 p {
@@ -287,6 +287,15 @@ div .textoExp {
 }
 
 @media screen and (max-width: 768px) {
+  div .col-12 {
+    margin-top: 12vh;
+  }
+  html {
+    height: 100vh;
+    max-height: 100vh;
+    display: block;
+    justify-items: center;
+  }
   .navbar {
     position: absolute;
     z-index: 1000;
@@ -435,6 +444,11 @@ div .textoExp {
 }
 
 @media screen and (max-width: 450px) {
+  $margenTop: 5vh;
+  $margenBottom: 0vh;
+   div .col-12 {
+    margin-top: 2vh;
+  }
   html {
     height: 100vh;
     max-height: 100vh;
@@ -445,12 +459,13 @@ div .textoExp {
     font-size: medium;
     background-color: #121212;
     color: grey;
-    margin: 20px;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 10px;
   }
   .inicio {
-    max-height: 75%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: $margenTop;
+    margin-bottom: $margenBottom;
   }
   // header
   .navbar {
@@ -475,10 +490,13 @@ div .textoExp {
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-items: center;
+    border-color: white;
     div .filaServ {
-      margin-top: 4vh;
-      margin-bottom: 4vh;
-      overflow: hidden;
+      margin-bottom: $margenBottom;
     }
     div .titulos1 {
       font-family: "Bebas Neue", cursive;
@@ -583,24 +601,24 @@ div .textoExp {
     font-size: 9vh;
     color: rgba(209, 212, 48, 0.836);
     text-decoration: none;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: $margenTop;
+    margin-bottom: $margenBottom;
   }
   main div .segunda {
     font-family: "Bebas Neue", cursive;
     color: grey;
     text-align: center;
     font-size: 5vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: $margenTop;
+    margin-bottom: $margenBottom;
   }
   main div .front {
     font-family: "Caveat", cursive;
     color: rgba(209, 212, 48, 0.836);
     font-size: 7vh;
     text-align: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: $margenTop;
+    margin-bottom: $margenBottom;
   }
   main div .primeraFila .cont .first #rFirst {
     margin-right: 0rem;
@@ -643,7 +661,7 @@ div .textoExp {
     margin-bottom: 0px;
     .aFooter {
       a .icon {
-        font-size: 3vh;
+        font-size: 4vh;
         color: $grey;
         justify-content: space-arround;
         margin-bottom: 10px;
@@ -662,11 +680,13 @@ div .textoExp {
     color: grey;
   }
   div .icono {
-    font-size: 7vh;
+    font-size: 6vh;
   }
   main div .fotoInt {
     height: 50vw;
     text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
   .descargaCv {
     font-family: "Montserrat", sans-serif;

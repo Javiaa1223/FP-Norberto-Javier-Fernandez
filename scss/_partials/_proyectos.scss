@@ -6,6 +6,7 @@ main {
   }
   div .cardslide {
     display: flex;
+    overflow: hidden;
     justify-content: space-evenly;
   }
   div .btnProyectos {
@@ -28,11 +29,35 @@ main {
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
   }
+  div .btnBcoProy::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(209, 212, 48, 0.836);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in all;
+  }
+  div .btnBcoProy:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+ 
   div .btnBcoProy:hover {
-    color: gray;
-    background-color: white;
-    transform: scale(1.02);
+    color: black;
+    transform: scale(1.1);
     transition: transform 0.2s ease;
   }
   div .titulos1 {
@@ -41,5 +66,17 @@ main {
   }
   .icono{
     font-size: 5vw;
+  }
+  div .w3-section{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    text-align: center;
+  }
+  div.slideAuto{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-top: 2vh;
   }
 }

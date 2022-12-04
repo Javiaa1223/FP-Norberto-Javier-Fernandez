@@ -1,4 +1,9 @@
+$margenfondo: 1vh;
+$margentope: 1vh;
 main {
+  height: max-content;
+  margin-top: $margentope;
+  margin-bottom: $margenfondo;
   div {
       .primeraFila {
       display: flex;
@@ -36,6 +41,7 @@ main {
       color: grey;
       text-align: center;
       font-size: 6vw;
+   
     }
 
     .segunda:hover {
@@ -47,6 +53,8 @@ main {
         color: rgba(209, 212, 48, 0.836);
         font-size: 6vw;
         text-align: center;
+        margin-top: $margentope;
+        margin-bottom: $margenfondo;
       }
     
       .front:hover {
@@ -55,8 +63,9 @@ main {
     
       .frontend {
         text-align: center;
-        -webkit-transform: rotate(-10deg);
-        -moz-transform: rotate(-10deg);
       }
   }
+}
+div .col-12 {
+  margin-top: 0vh;
 }
